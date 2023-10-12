@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow: #D2D904;
+  --green-primary: #83A603;
+  --green-secondary: #5A7302;
+  --red-alert: #AE2323;
+  --gray-primary: #686868;
+  --gray-secondary: #D9D9D9;
+  --blur: rgba(0, 0, 0, 0.40);
+}
