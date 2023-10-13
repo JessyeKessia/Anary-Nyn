@@ -1,0 +1,25 @@
+section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+section h2 {
+  color: var(--green-secondary);
+  font-size: 3rem;
+}
+
+section #containers {
+  display: flex;
+  flex: 1;
+  gap: 2.5rem;
+}
+
+section #containers .container {
+  padding: 1.5rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
