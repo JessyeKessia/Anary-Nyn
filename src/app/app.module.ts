@@ -7,13 +7,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeadComponent } from './components/head/head.component';
 import { BodyComponent } from './components/body/body.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FormComponent } from './componenetd/form/form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeadComponent,
     BodyComponent,
-    FooterComponent
+    FooterComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
