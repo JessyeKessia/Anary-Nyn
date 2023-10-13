@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./head.component.css']
 })
 export class HeadComponent {
-
+  redirectToHome(): void {
+    window.open("", "_blank");
+  }
 }
