@@ -21,5 +21,9 @@ section #containers .container {
   padding: 1.5rem;
   border: 1px solid black;
   border-radius: 0.5rem;
+}
+
+section #containers .container p {
   font-size: 1.5rem;
+  line-height: 40px;
 }
