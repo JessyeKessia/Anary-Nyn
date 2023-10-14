@@ -56,17 +56,31 @@ li {
   gap: 20px;
 }
 
+button {
+  font-size: 1.25rem;
+}
+
 .doe {
   font-weight: 700;
   padding: 18px 24px;
   align-items: center;
   border-radius: 4px;
-  background: var(--yellow, #d2d904);
+  background-color: var(--yellow);
 }
+
+.doe:hover {
+  background-color: #eaf108;
+}
+
 .cadastra {
   font-weight: 500;
   padding: 18px 24px;
   align-items: center;
   border-radius: 4px;
-  background: var(--green-primary, #83a603);
+  background-color: var(--green-primary);
+  color: #fff;
+}
+
+.cadastra:hover {
+  background-color: #90b803;
 }
