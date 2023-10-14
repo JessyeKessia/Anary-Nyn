@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +9,11 @@ import { BodyComponent } from './components/body/body.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { FormComponent } from './components/form/form.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+
+import { register } from 'swiper/element/bundle';
+
+register();
 
 @NgModule({
   declarations: [
@@ -17,7 +22,8 @@ import { FormComponent } from './components/form/form.component';
     BodyComponent,
     FooterComponent,
     AboutUsComponent,
-    FormComponent
+    FormComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +31,7 @@ import { FormComponent } from './components/form/form.component';
     FontAwesomeModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

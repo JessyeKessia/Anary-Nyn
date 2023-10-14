@@ -1,0 +1,6 @@
+.blur {
+  color: #fff;
+  position: relative;
+  z-index: 10;
+  height: 500px;
+}
