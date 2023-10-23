@@ -1,0 +1,67 @@
+button {
+    background: none;
+    border: none;
+}
+
+.alert {
+    width: 400px;
+    padding: 24px;
+    border-radius: 4px;
+    background-color: var(--gray-secondary);
+    box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.14);
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
+.alert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alert-header h4 {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+}
+
+.alert-header button {
+    font-size: 20px;
+}
+
+p {
+    margin: 18px 0;
+    line-height: 28px;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 16px;
+}
+
+.actions button {
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.actions button.accept-btn {
+    background-color: var(--green-primary);
+}
+
+.actions button.accept-btn:hover {
+    background-color: rgb(118, 148, 10)
+}
+
+.actions button.reject-btn {
+    background-color: var(--red-alert);
+}
+
+.actions button.reject-btn:hover {
+    background-color: #cb2e2e;
+}

@@ -12,6 +12,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 
 import { register } from 'swiper/element/bundle';
+import { CookieAlertComponent } from './components/cookie-alert/cookie-alert.component';
 
 register();
 
@@ -23,7 +24,8 @@ register();
     FooterComponent,
     AboutUsComponent,
     FormComponent,
-    CarouselComponent
+    CarouselComponent,
+    CookieAlertComponent
   ],
   imports: [
     BrowserModule,
