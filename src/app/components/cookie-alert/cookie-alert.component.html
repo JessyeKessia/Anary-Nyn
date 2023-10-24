@@ -1,23 +1,19 @@
-<div class="alert">
-    <div class="alert-header">
-        <h4>We respect your privacy</h4>
+<div class="alert" *ngIf="showAlert">
+  <div class="alert-header">
+    <h4>We respect your privacy</h4>
 
-        <button>x</button>
-    </div>
+    <button (click)="closeAlert()">x</button>
+  </div>
 
-    <p>
-        We use cookies to enhance your browsing experience. Cookies are small text files
-        that help us personalize your experience by remembering your preferences and
-        optimizing the site's performance.
-    </p>
+  <p>
+    We use cookies to enhance your browsing experience. Cookies are small text
+    files that help us personalize your experience by remembering your
+    preferences and optimizing the site's performance.
+  </p>
 
-    <div class="actions">
-        <button class="accept-btn">
-            Accept Cookies
-        </button>
+  <div class="actions">
+    <button class="accept-btn" (click)="closeAlert()">Accept Cookies</button>
 
-        <button class="reject-btn">
-            Reject All
-        </button>
-    </div>
+    <button class="reject-btn" (click)="closeAlert()">Reject All</button>
+  </div>
 </div>

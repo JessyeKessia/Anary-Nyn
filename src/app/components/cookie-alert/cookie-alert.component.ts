@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./cookie-alert.component.css']
 })
 export class CookieAlertComponent {
+  showAlert = true
 
+  closeAlert(): void {
+    this.showAlert = false
+  }
 }
