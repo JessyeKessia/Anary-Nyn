@@ -9,9 +9,10 @@ button {
     border-radius: 4px;
     background-color: var(--gray-secondary);
     box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.14);
-    position: absolute;
-    bottom: 40px;
-    right: 40px;
+    position: fixed;
+    right: 55px;
+    z-index: 20;
+    animation: moveToTop 950ms ease-out forwards;
 }
 
 .alert-header {
@@ -64,4 +65,14 @@ p {
 
 .actions button.reject-btn:hover {
     background-color: #cb2e2e;
+}
+
+@keyframes moveToTop {
+    from {
+        bottom: -1000px;
+    }
+
+    to {
+        bottom: 40px;
+    }
 }
