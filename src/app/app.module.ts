@@ -3,19 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeadComponent } from './components/head/head.component';
 import { BodyComponent } from './components/body/body.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { FormComponent } from './components/form/form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
-
 import { register } from 'swiper/element/bundle';
 import { CookieAlertComponent } from './components/cookie-alert/cookie-alert.component';
+import { FormComponent } from './doadores/form/form.component';
 
 register();
 
@@ -24,16 +23,18 @@ register();
     AppComponent,
     HeadComponent,
     BodyComponent,
+    FormComponent,
     FooterComponent,
     AboutUsComponent,
-    FormComponent,
     CarouselComponent,
-    CookieAlertComponent
+    CookieAlertComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot()

@@ -1,0 +1,66 @@
+<div class="container-doar" >
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+        <h2>Doação</h2>
+
+        <!--Checkbox de selecao do preço doado -->
+        <div class="container-doacao">
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> R$ 10
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> R$ 20
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> R$ 50
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"> R$ 100
+            </label>
+        </div>
+
+        <!--Input de nome do doador-->
+        <div class="form-group">
+            <label for="inputDoador" class="col-sm-2 control-label">Nome</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputName" placeholder="Digite o seu nome completo">
+            </div>
+          </div>
+
+        <!--Input de email do doador-->
+        <div class="form-group">
+            <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="inputEmail" placeholder="Digite o seu e-mail">
+            </div>
+        </div>
+
+        <!--Input de telefone do doador-->
+        <div class="form-group">
+            <label for="inputTelefone" class="col-sm-2 control-label">Telefone</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="inputEmail" placeholder="(XX)XXXXX-XXXX">
+            </div>
+        </div>
+
+        <!--Botao de submissao do formulario-->
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default">Doe agora</button>
+            </div>
+        </div>
+
+        <!--Checkboxs-->
+        <div class="checkbox-notifications">
+            <label>
+            <input type="checkbox" value="">
+            Você concorda em receber as notificações dos projetos
+            </label>
+        </div>
+        <div class="checkbox-terms">
+            <label>
+            <input type="checkbox" value="">
+            Você concorda com os <u>Termos e Condições</u>
+            </label>
+        </div>
+    </form>
+</div>
