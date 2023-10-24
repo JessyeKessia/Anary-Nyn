@@ -7,3 +7,9 @@ img {
   height: 500px;
   object-fit: cover;
 }
+
+@media (max-width: 425px) {
+  .container, img {
+    height: 264px;
+  }
+}

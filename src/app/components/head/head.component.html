@@ -4,18 +4,26 @@
       <img src="/assets/logo-desktop.svg" class="logo" />
     </a>
 
-    <div class="options-menu">
-      <ul>
-        <li>Projetos</li>
-        <li>Sobre nós</li>
-        <li>Coladoradores</li>
-      </ul>
-    </div>
+    <input type="checkbox" id="toggle-menu">
 
-    <div class="options-bottons">
-      <button class="cadastra" onclick="redirectToHome()">CADASTRAR</button>
-      <button class="doe" onclick="redirectToDoa()">DOE AGORA</button>
-    </div>
+    <nav>
+      <div class="options-menu">
+        <ul>
+          <li>Projetos</li>
+          <li>Sobre nós</li>
+          <li>Coladoradores</li>
+        </ul>
+      </div>
+  
+      <div class="options-bottons">
+        <button class="cadastra" onclick="redirectToHome()">CADASTRAR</button>
+        <button class="doe" onclick="redirectToDoa()">DOE AGORA</button>
+      </div>
+    </nav>
+
+    <label for="toggle-menu">
+      <fa-icon [icon]="menuIcon" class="menu-icon"></fa-icon>
+    </label>
   </div>
 
   <app-carousel></app-carousel>

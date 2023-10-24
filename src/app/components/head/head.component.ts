@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-head',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./head.component.css']
 })
 export class HeadComponent {
+  menuIcon = faBars
+
   redirectToHome(): void {
     window.open("", "_blank");
   }

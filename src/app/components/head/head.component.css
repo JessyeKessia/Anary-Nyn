@@ -3,6 +3,10 @@ header {
   position: relative;
 }
 
+input[type="checkbox"], label {
+  display: none;
+}
+
 header::after {
   content: '';
   position: absolute;
@@ -25,8 +29,8 @@ header::after {
   left: 0;
   z-index: 20;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   height: 7.75rem;
   padding: 0 2.5rem;
@@ -37,11 +41,16 @@ header::after {
   height: 5.5rem;
 }
 
+nav {
+  grid-column: 2 / 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .options-menu {
   display: flex;
   text-align: center;
   justify-content: center;
-  transform: translate(30%);
 }
 
 ul {
@@ -66,6 +75,7 @@ li {
   display: flex;
   align-items: center;
   gap: 20px;
+  justify-self: end;
 }
 
 button {
@@ -106,4 +116,54 @@ h1 {
   text-align: center;
   color: #fff;
   font-size: 2.5rem;
+}
+
+@media (max-width: 425px) {
+  header::after {
+    height: 264px;
+  }
+
+  label {
+    display: block;
+    font-size: 32px;
+    justify-self: end;
+    color: #fff;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .container-head {
+    height: auto;
+    padding: 18px;
+    grid-template-columns: 1fr 1fr;
+    height: 264px;
+    align-items: start;
+  }
+
+  nav {
+    display: none;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+
+  input[type="checkbox"]:checked + nav {
+    display: block;
+    background-color: var(--green-primary);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+  }
+
+  input[type="checkbox"]:checked + nav
+    .options-menu ul,
+    .options-bottons
+  {
+    display: flex;
+    flex-direction: column;
+  }
 }
