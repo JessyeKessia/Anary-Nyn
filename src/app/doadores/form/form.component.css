@@ -1,0 +1,25 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+form h2 {
+    color: var(--green-secondary);
+    font-size: 3rem;
+}
+
+.container-doacao {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border: 2px solid green;
+}
+.radio-inline {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid green;
+}
