@@ -4,3 +4,10 @@ main {
   flex-direction: column;
   gap: 80px;
 }
+
+@media (max-width: 425px) {
+  main {
+    padding: 40px 18px;
+    gap: 40px;
+  }
+}
