@@ -85,10 +85,13 @@ button {
 
 .doe {
   font-weight: 700;
-  padding: 1.125rem 1.5rem;
   align-items: center;
   border-radius: 0.25rem;
   background-color: var(--yellow);
+  text-decoration-line: none;
+  color: var(--black);
+  padding: 1.125rem 1.5rem;
+  font-size: 20px;
 }
 
 .doe:hover {
@@ -102,6 +105,7 @@ button {
   border-radius: 0.25rem;
   background-color: var(--green-primary);
   color: #fff;
+  border: none;
 }
 
 .cadastra:hover {
