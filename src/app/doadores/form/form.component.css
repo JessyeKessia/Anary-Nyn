@@ -1,9 +1,8 @@
 form {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
     align-items: center;
+    flex-direction: column;
+    gap: 3.5rem;
 }
 
 form h2 {
@@ -11,15 +10,79 @@ form h2 {
     font-size: 3rem;
 }
 
-.container-doacao {
+.container-form {
     display: flex;
-    width: 20px;
-    height: 20px;
-    border: 2px solid green;
+    justify-content: center;
+    flex-direction: column;
+
 }
+.checkbox-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 .radio-inline {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 2px solid green;
+    display: flex;
+    padding: 0px 40px;
+    height: 56px;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid var(--green-secondary);
+    border-radius: 8px;
+    cursor: pointer;
 }
+
+
+#checkbox input[type="radio"] {
+    display: none;
+}
+
+label:active + #checkbox input[type="radio"]:before {
+    background-color: red;
+}
+span {
+    color: var(--black);
+    text-align: center;
+    font-size: 28px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form-input1 {
+    flex-basis: 100%;
+}
+
+.form-input2, .form-input3 {
+    flex-basis: 50%;
+}
+
+.checkbox-container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+.text-buttom {
+    display: inline-flex;
+    align-items: center;
+    padding: 24px 40px;
+    color: var(--black);
+    font-size: 24px;
+    font-weight: 500;
+    background-color: var(--yellow);
+    border-radius: 4px;
+    justify-content: center;
+}
+
+.text-buttom:hover {
+    background-color: #eaf108;
+  }
+  

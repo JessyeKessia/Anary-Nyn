@@ -25,15 +25,15 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
     
   };
-  // Swal.fire({
-  //   icon: 'success',
-  //   title: 'Sucesso',
-  //   text: 'Cliente cadastrado com sucesso!',
-  //   showConfirmButton: false,
-  //   timer: 1500
-  // })
+
   onSubmit() {
-    
+      Swal.fire({
+    icon: 'success',
+    title: 'Sucesso',
+    text: 'Cliente cadastrado com sucesso!',
+    showConfirmButton: false,
+    timer: 1500
+  })
     console.log(this.formGroup.valid)
     if (this.formGroup.valid) {
       console.log('oii')
