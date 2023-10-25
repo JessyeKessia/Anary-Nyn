@@ -39,11 +39,14 @@ form h2 {
     display: none;
 }
 
-label:active + #checkbox input[type="radio"]:before {
-    background-color: red;
+input[type="radio"]:checked + label {
+    background-color: var(--green-secondary);
+    
+}
+input[type="radio"]:checked + label span {
+    color: var(--white);
 }
 span {
-    color: var(--black);
     text-align: center;
     font-size: 28px;
 }
@@ -53,24 +56,134 @@ span {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 32px;
+    margin-bottom: 36px;
 }
 
-.form-input1 {
-    flex-basis: 100%;
+.form-input1, .control-input1, .form-control{
+    width: 100%;
 }
 
-.form-input2, .form-input3 {
-    flex-basis: 50%;
+.form-input1, .form-input2 {
+    color: var(--black);
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 400;
+}
+.span-input {
+    color: var(--red-primary);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.form-control, .form-control2{
+    color: var(--gray-primary);
+    padding: 14px 14px;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 400;
+    background: var(--gray-secondary);
+    border: none;
+    border-radius: 4px;
+}
+
+.form-input2 {
+    width: 50%;
+}
+.control-input2, .form-control2 {
+    width: 100%;
+}
+
+.input-email-telefone {
+    display: flex;
+    gap: 22px;
+    width: 100%;
 }
 
 .checkbox-container2 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    gap: 27px;
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
 }
 
 
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+
+.container input:checked ~ .checkmark {
+    background-color: var(--green-primary);
+}
+
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.buttom-container {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
 .text-buttom {
+    border: none;
     display: inline-flex;
     align-items: center;
     padding: 24px 40px;
