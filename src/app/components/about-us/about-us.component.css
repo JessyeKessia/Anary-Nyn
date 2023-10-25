@@ -27,3 +27,27 @@ section #containers .container p {
   font-size: 1.5rem;
   line-height: 40px;
 }
+
+@media (max-width: 425px) {
+  section {
+    gap: 18px;
+  }
+
+  section h2 {
+    font-size: 24px;
+  }
+
+  section #containers {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  section #containers .container {
+    padding: 12px;
+  }
+
+  section #containers .container p {
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
