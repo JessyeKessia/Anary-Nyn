@@ -21,6 +21,7 @@ section #containers .container {
   padding: 1.5rem;
   border: 1px solid black;
   border-radius: 0.5rem;
+  width: 100%;
 }
 
 section #containers .container p {
@@ -49,5 +50,6 @@ section #containers .container p {
   section #containers .container p {
     font-size: 10px;
     line-height: 20px;
+    justify-content: justify;
   }
 }
