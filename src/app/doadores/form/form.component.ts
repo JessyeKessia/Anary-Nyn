@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators  } from '@angular/forms';
+import { faUser, faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import Swal from 'sweetalert2'
 
 @Component({
@@ -16,6 +18,10 @@ export class FormComponent {
     notificacoes: new FormControl(false),
     termos: new FormControl(false)
   });
+
+  userIcon = faUser;
+  phoneIcon = faPhone;
+  emailIcon = faEnvelope;
 
   onSubmit() {
     if (this.formGroup.valid) {
