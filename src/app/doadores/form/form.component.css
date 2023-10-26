@@ -178,7 +178,6 @@ fa-icon {
     display: block;
 }
 
-
 .container .checkmark:after {
     left: 9px;
     top: 5px;
@@ -211,5 +210,75 @@ fa-icon {
 
 .text-buttom:hover {
     background-color: #eaf108;
-  }
+}
+
+
+@media (max-width: 767px) {
+.container-form {
+    flex-direction: column;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.checkbox-container span {
+    font-size: 22px;
+}
   
+.radio-inline {
+    font-size: 5px;
+    padding: 10px 10px;
+    flex-basis: calc(50% - 10px);
+}
+  
+.radio-inline:last-child {
+    flex-basis: 100%; 
+}
+
+.input-container {
+    flex-direction: column;
+}
+
+.input-container label {
+    font-size: 14px;
+}
+
+.input-container input {
+    font-size: 14px;
+}
+
+.input-email-telefone {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-input2 {
+    width: 100%;
+}
+
+.checkbox-container2 {
+    gap: 10px;
+}
+.container .checkmark:after {
+    left: 6px;
+    top: 1px;
+    width: 2px;
+    height: 8px;
+}
+.checkmark {
+    height: 15px;
+    width: 15px;
+}
+
+.container {
+    font-size: 10px;
+    margin-bottom: 5px;
+    padding-left: 20px;
+    justify-items: center;
+}
+}
+
