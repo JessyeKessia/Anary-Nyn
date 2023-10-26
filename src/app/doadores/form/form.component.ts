@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { faUser, faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FormControl, FormGroup, Validators  } from '@angular/forms';
 import Swal from 'sweetalert2'
 
@@ -8,8 +9,13 @@ import Swal from 'sweetalert2'
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
+
+
 export class FormComponent implements OnInit {
   formGroup: FormGroup;
+  userIcon = faUser;
+  phoneIcon = faPhone;
+  emailIcon = faEnvelope;
 
   constructor(){
     this.formGroup = new FormGroup({

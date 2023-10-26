@@ -65,6 +65,17 @@ span {
     width: 100%;
 }
 
+.control-input1, .control-input2{
+    display: flex;
+    align-items: center;
+    background: var(--gray-secondary);
+    border-radius: 4px;
+}
+fa-icon {
+    width: 32px;
+    padding: 12px 12px;
+}
+
 .form-input1, .form-input2 {
     color: var(--black);
     text-align: justify;
@@ -79,6 +90,7 @@ span {
 
 .form-control, .form-control2{
     color: var(--gray-primary);
+    outline: none;
     padding: 14px 14px;
     text-align: justify;
     font-size: 18px;
@@ -91,6 +103,8 @@ span {
 .form-input2 {
     width: 50%;
 }
+
+
 .control-input2, .form-control2 {
     width: 100%;
 }
