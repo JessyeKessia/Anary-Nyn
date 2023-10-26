@@ -4,62 +4,33 @@
     <div class="container-form">
       <!--Checkbox de selecao do preço doado -->
       <div class="checkbox-container" id="checkbox">
-        <input
-          type="radio"
-          name="valor"
-          id="valor-10"
-          value="10"
-          formControlName="valor"
-          (click)="onFocusValorPadrao()"
-        />
+        <input type="radio" name="valor" id="valor-10" value="10" formControlName="valor"
+          (click)="onFocusValorPadrao()" />
         <label for="valor-10" class="radio-inline">
           <span>R$ 10</span>
         </label>
 
-        <input
-          type="radio"
-          name="valor"
-          id="valor-20"
-          value="20"
-          formControlName="valor"
-          (click)="onFocusValorPadrao()"
-        />
+        <input type="radio" name="valor" id="valor-20" value="20" formControlName="valor"
+          (click)="onFocusValorPadrao()" />
         <label for="valor-20" class="radio-inline">
           <span>R$ 20</span>
         </label>
 
-        <input
-          type="radio"
-          name="valor"
-          id="valor-50"
-          value="50"
-          formControlName="valor"
-          (click)="onFocusValorPadrao()"
-        />
+        <input type="radio" name="valor" id="valor-50" value="50" formControlName="valor"
+          (click)="onFocusValorPadrao()" />
         <label for="valor-50" class="radio-inline">
           <span>R$ 50</span>
         </label>
 
-        <input
-          type="radio"
-          name="valor"
-          id="valor-100"
-          value="100"
-          formControlName="valor"
-          (click)="onFocusValorPadrao()"
-        />
+        <input type="radio" name="valor" id="valor-100" value="100" formControlName="valor"
+          (click)="onFocusValorPadrao()" />
         <label for="valor-100" class="radio-inline">
           <span>R$ 100</span>
         </label>
 
         <div class="custom-value">
-          <input
-            type="text"
-            id="valor-customizado"
-            placeholder="Outro Valor"
-            formControlName="valor"
-            (focus)="onFocusValorCustomizado($event)"
-          />
+          <input type="text" id="valor-customizado" placeholder="Outro Valor" formControlName="valor"
+            (focus)="onFocusValorCustomizado($event)" />
           <span *ngIf="showFormatoMoeda">R$</span>
         </div>
       </div>
@@ -72,13 +43,8 @@
           </label>
           <div class="control-input1">
             <fa-icon [icon]="userIcon"></fa-icon>
-            <input
-              type="text"
-              class="form-control"
-              id="inputName"
-              placeholder="Digite o seu nome completo"
-              formControlName="nome"
-            />
+            <input type="text" class="form-control" id="inputName" placeholder="Digite o seu nome completo"
+              formControlName="nome" />
           </div>
           <small class="status status-nome"></small>
         </div>
@@ -86,20 +52,14 @@
         <!--Input de email do doador-->
         <div class="input-email-telefone">
           <div class="form-input2">
-            <label for="inputEmail" class="control-label"
-              >Email <span class="span-input"> * </span>
+            <label for="inputEmail" class="control-label">Email <span class="span-input"> * </span>
             </label>
             <div class="control-input2">
               <fa-icon [icon]="emailIcon"></fa-icon>
-              <input
-                type="email"
-                class="form-control2"
-                id="inputEmail"
-                placeholder="Digite o seu e-mail"
-                formControlName="email"
-              />
+              <input type="email" class="form-control2" id="inputEmail" placeholder="Digite o seu e-mail"
+                formControlName="email" />
             </div>
-            <small class="status status-email"></small>
+            <small class="status status-nome"></small>
           </div>
 
           <!--Input de telefone do doador-->
@@ -107,27 +67,20 @@
             <label for="inputTelefone" class="control-label">Telefone</label>
             <div class="control-input2">
               <fa-icon [icon]="phoneIcon"></fa-icon>
-              <input
-                type="email"
-                class="form-control2"
-                id="inputPhone"
-                placeholder="(XX)XXXXX-XXXX"
-                formControlName="telefone"
-              />
+              <input type="email" class="form-control2" id="inputPhone" placeholder="(XX)XXXXX-XXXX"
+                formControlName="telefone" />
             </div>
           </div>
         </div>
       </div>
       <!--Checkboxs-->
       <div class="checkbox-container2">
-        <label class="container"
-          >Você concorda em receber as notificações dos projetos
+        <label class="container">Você concorda em receber as notificações dos projetos
           <input type="checkbox" formControlName="notificacoes" />
           <span class="checkmark"></span>
         </label>
 
-        <label class="container"
-          >Você concorda com os <u>Termos e Condições</u>
+        <label class="container">Você concorda com os <u>Termos e Condições</u>
           <input type="checkbox" formControlName="termos" />
           <span class="checkmark"></span>
         </label>
