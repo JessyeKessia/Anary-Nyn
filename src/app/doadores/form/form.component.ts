@@ -23,6 +23,9 @@ export class FormComponent {
   phoneIcon = faPhone;
   emailIcon = faEnvelope;
 
+  showFormatoMoeda = false;
+  valorCustomizadoSelecionado = false
+
   onSubmit() {
     if (this.formGroup.valid) {
       Swal.fire({
@@ -31,9 +34,35 @@ export class FormComponent {
         text: 'Doação realizada com sucesso!',
         showConfirmButton: false,
         timer: 2000
-      })
+      });
 
-      this.formGroup.reset()
+      this.formGroup.reset();
+      this.showFormatoMoeda = false;
+      (document.querySelector('#valor-customizado') as HTMLInputElement).classList.remove('fill');
     }
+  }
+
+  onFocusValorCustomizado(event: FocusEvent) {
+    if (this.formGroup.get('valor')?.value !== '') {
+      this.formGroup.get('valor')?.reset()
+    }
+
+    this.showFormatoMoeda = true;
+
+    (event.target as HTMLInputElement).classList.add('fill')
+
+    if ((event.target as HTMLInputElement).value === '') {
+      (event.target as HTMLInputElement).value = '0'
+    }
+  }
+
+  onFocusValorPadrao() {
+    if (this.showFormatoMoeda || this.formGroup.get('valor')?.value === '') {
+      this.showFormatoMoeda = false;
+      (document.querySelector('#valor-customizado') as HTMLInputElement).value = '';
+      (document.querySelector('#valor-customizado') as HTMLInputElement).classList.remove('fill');
+    }
+
+    console.log(this.showFormatoMoeda);
   }
 }
