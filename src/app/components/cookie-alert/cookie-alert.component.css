@@ -76,3 +76,11 @@ p {
         bottom: 40px;
     }
 }
+
+@media (max-width: 425px) {
+    .alert {
+        width: 100vw;
+        right: 0;
+        transform: translateY(40px);
+    }
+}
