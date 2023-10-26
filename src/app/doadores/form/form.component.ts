@@ -27,6 +27,21 @@ export class FormComponent {
   valorCustomizadoSelecionado = false
 
   onSubmit() {
+    if (this.formGroup.get('nome')?.errors && this.formGroup.get('nome')?.hasError('required')) {
+      (document.querySelector('.status-nome') as Element).textContent = 'Campo Obrigatório';
+      (document.querySelector('.control-input1') as Element).classList.add('status-border');
+    }
+
+    if (this.formGroup.get('email')?.errors && this.formGroup.get('email')?.hasError('required')) {
+      (document.querySelector('.status-email') as Element).textContent = 'Campo Obrigatório';
+      (document.querySelector('.control-input2') as Element).classList.add('status-border');
+    }
+
+    if (this.formGroup.get('email')?.errors && this.formGroup.get('email')?.hasError('email')) {
+      (document.querySelector('.status-email') as Element).textContent = 'E-mail inválido';
+      (document.querySelector('.control-input2') as Element).classList.add('status-border');
+    }
+
     if (this.formGroup.valid) {
       Swal.fire({
         icon: 'success',
@@ -35,6 +50,12 @@ export class FormComponent {
         showConfirmButton: false,
         timer: 2000
       });
+
+      (document.querySelector('.status-nome') as Element).textContent = '';
+      (document.querySelector('.control-input1') as Element).classList.remove('status-border');
+
+      (document.querySelector('.status-email') as Element).textContent = '';
+      (document.querySelector('.control-input2') as Element).classList.remove('status-border');
 
       this.formGroup.reset();
       this.showFormatoMoeda = false;

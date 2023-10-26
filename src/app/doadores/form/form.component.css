@@ -192,6 +192,15 @@ fa-icon {
   transform: rotate(45deg);
 }
 
+.status {
+  margin-top: 4px;
+  color: var(--red-primary);
+}
+
+.status-border {
+  border: 2px solid red;
+}
+
 .buttom-container {
   margin-top: 32px;
   display: flex;
