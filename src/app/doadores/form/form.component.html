@@ -1,44 +1,76 @@
 <div class="container-doar" id="forms">
-    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
-        <h2>Doação</h2>
-        <div class="container-form">
-            <!--Checkbox de selecao do preço doado -->
-            <div class="checkbox-container" id="checkbox">
-                <input type="radio" name="inlineRadioOptions" id="valor-10" value="10">
-                <label for="valor-10" class="radio-inline">
-                    <span>R$ 10</span>
-                </label>
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <h2>Doação</h2>
+    <div class="container-form">
+      <!--Checkbox de selecao do preço doado -->
+      <div class="checkbox-container" id="checkbox">
+        <input
+          type="radio"
+          name="valor"
+          id="valor-10"
+          value="10"
+          formControlName="valor"
+        />
+        <label for="valor-10" class="radio-inline">
+          <span>R$ 10</span>
+        </label>
 
-                <input type="radio" name="inlineRadioOptions" id="valor-20" value="20">
-                <label for="valor-20" class="radio-inline">
-                    <span>R$ 20</span>
-                </label>
+        <input
+          type="radio"
+          name="valor"
+          id="valor-20"
+          value="20"
+          formControlName="valor"
+        />
+        <label for="valor-20" class="radio-inline">
+          <span>R$ 20</span>
+        </label>
 
-                <input type="radio" name="inlineRadioOptions" id="valor-50" value="50">
-                <label for="valor-50" class="radio-inline">
-                    <span>R$ 50</span>
-                </label>
-                <input type="radio" name="inlineRadioOptions" id="valor-100" value="100">
-                <label for="valor-100" class="radio-inline">
-                    <span>R$ 100</span>
-                </label>
-            </div>
+        <input
+          type="radio"
+          name="valor"
+          id="valor-50"
+          value="50"
+          formControlName="valor"
+        />
+        <label for="valor-50" class="radio-inline">
+          <span>R$ 50</span>
+        </label>
 
-            <!--Input de nome do doador-->
-            <div class="input-container">
-                <div class="form-input1">
-                    <label for="inputDoador" class="control-label"> Nome completo <span class="span-input"> *
-                        </span></label>
-                    <div class="control-input1">
-                        <fa-icon [icon]="userIcon"></fa-icon>
-                        <input type="text" class="form-control" id="inputName" placeholder="Digite o seu nome completo">
-                    </div>
-                </div>
+        <input
+          type="radio"
+          name="valor"
+          id="valor-100"
+          value="100"
+          formControlName="valor"
+        />
+        <label for="valor-100" class="radio-inline">
+          <span>R$ 100</span>
+        </label>
+      </div>
+
+      <!--Input de nome do doador-->
+      <div class="input-container">
+        <div class="form-input1">
+          <label for="inputDoador" class="control-label">
+            Nome completo <span class="span-input"> * </span>
+          </label>
+          <div class="control-input1">
+            <fa-icon [icon]="userIcon"></fa-icon>
+            <input
+              type="text"
+              class="form-control"
+              id="inputName"
+              placeholder="Digite o seu nome completo"
+              formControlName="nome"
+            />
+          </div>
+        </div>
 
                 <!--Input de email do doador-->
                 <div class="input-email-telefone">
                     <div class="form-input2">
-                        <label for="inputEmail" class="control-label">E-mail <span class="span-input"> * </span>
+                        <label for="inputEmail" class="control-label">Email <span class="span-input"> * </span>
                         </label>
                         <div class="control-input2">
                             <fa-icon [icon]="emailIcon"></fa-icon>
@@ -46,35 +78,43 @@
                         </div>
                     </div>
 
-                    <!--Input de telefone do doador-->
-                    <div class="form-input2">
-                        <label for="inputTelefone" class="control-label">Telefone</label>
-                        <div class="control-input2">
-                            <fa-icon [icon]="phoneIcon"></fa-icon>
-                            <input type="email" class="form-control2" id="inputPhone" placeholder="(XX)XXXXX-XXXX">
-                        </div>
-                    </div>
-                </div>
+          <!--Input de telefone do doador-->
+          <div class="form-input2">
+            <label for="inputTelefone" class="control-label">Telefone</label>
+            <div class="control-input2">
+              <fa-icon [icon]="phoneIcon"></fa-icon>
+              <input
+                type="email"
+                class="form-control2"
+                id="inputPhone"
+                placeholder="(XX)XXXXX-XXXX"
+                formControlName="telefone"
+              />
             </div>
-            <!--Checkboxs-->
-
-            <div class="checkbox-container2">
-                <label class="container">Você concorda em receber as notificações dos projetos
-                    <input type="checkbox" checked="checked">
-                    <span class="checkmark"></span>
-                </label>
-
-                <label class="container">Você concorda com os <u>Termos e Condições</u>
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                </label>
-            </div>
-            <!--Botao de submissao do formulario-->
-            <div class="buttom-container">
-                <div class="buttom">
-                    <button type="submit" class="text-buttom">DOE AGORA</button>
-                </div>
-            </div>
+          </div>
         </div>
-    </form>
+      </div>
+      <!--Checkboxs-->
+
+      <div class="checkbox-container2">
+        <label class="container"
+          >Você concorda em receber as notificações dos projetos
+          <input type="checkbox" formControlName="notificacoes" />
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="container"
+          >Você concorda com os <u>Termos e Condições</u>
+          <input type="checkbox" formControlName="termos" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <!--Botao de submissao do formulario-->
+      <div class="buttom-container">
+        <div class="buttom">
+          <button type="submit" class="text-buttom">DOE AGORA</button>
+        </div>
+      </div>
+    </div>
+  </form>
 </div>
