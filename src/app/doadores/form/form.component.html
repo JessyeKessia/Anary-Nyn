@@ -82,16 +82,23 @@
           </div>
         </div>
 
-                <!--Input de email do doador-->
-                <div class="input-email-telefone">
-                    <div class="form-input2">
-                        <label for="inputEmail" class="control-label">Email <span class="span-input"> * </span>
-                        </label>
-                        <div class="control-input2">
-                            <fa-icon [icon]="emailIcon"></fa-icon>
-                            <input type="email" class="form-control2" id="inputEmail" placeholder="Digite o seu e-mail">
-                        </div>
-                    </div>
+        <!--Input de email do doador-->
+        <div class="input-email-telefone">
+          <div class="form-input2">
+            <label for="inputEmail" class="control-label"
+              >Email <span class="span-input"> * </span>
+            </label>
+            <div class="control-input2">
+              <fa-icon [icon]="emailIcon"></fa-icon>
+              <input
+                type="email"
+                class="form-control2"
+                id="inputEmail"
+                placeholder="Digite o seu e-mail"
+                formControlName="email"
+              />
+            </div>
+          </div>
 
           <!--Input de telefone do doador-->
           <div class="form-input2">

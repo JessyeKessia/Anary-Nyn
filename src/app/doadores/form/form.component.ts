@@ -28,6 +28,8 @@ export class FormComponent {
 
   onSubmit() {
     if (this.formGroup.valid) {
+      console.log('validooo');
+
       Swal.fire({
         icon: 'success',
         title: 'Obrigado!',
@@ -39,6 +41,10 @@ export class FormComponent {
       this.formGroup.reset();
       this.showFormatoMoeda = false;
       (document.querySelector('#valor-customizado') as HTMLInputElement).classList.remove('fill');
+    } else {
+      console.log(this.formGroup.get('nome')?.errors);
+      console.log(this.formGroup.get('email')?.errors);
+      console.log(this.formGroup.get('valor')?.errors);
     }
   }
 
